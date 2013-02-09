@@ -26,7 +26,13 @@
 
 		titleHeight = 0, titleStr = '', start_pos, final_pos, busy = false, fx = $.extend($('<div/>')[0], { prop: 0 }),
 
-		isIE6 = $.browser.msie && $.browser.version < 7 && !window.XMLHttpRequest,
+		/*
+		 *isIE6 = $.browser.msie && $.browser.version < 7 && !window.XMLHttpRequest,
+		 */
+		 isIE6 = navigator.userAgent.match(/msie/i) && navigator.userAgent.match(/6/) && !window.XMLHttpRequest,
+		 /*
+		  * http://stackoverflow.com/questions/14344289/fancybox-doesnt-work-with-jquery-v1-9-0-f-browser-is-undefined-cannot-read
+		  */
 
 		/*
 		 * Private methods 
